@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>student placement classifier model</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .image-1
+            {
+                width: 100%;
+                height: 400px;
+            }
+            .heading{
+                min-height: 60px;
+                background-color: #333;
+                border-radius: 30px;
+            }
+            .heading h1{
+                font-size: 30px;
+                font-weight: bold;
+                padding: 20px;
+                font-family: sans-serif;
+                color: white;
+                text-align: center;
+
+            }
+            .from-sec
+            {
+                background-color: #777;
+                height: 450px;
+            }
+            .pred
+            {
+                padding-top: 80px;
+            }
+            input[type="text"]
+            {
+                border: none;
+                padding: 10px;
+                width: 250px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+
+            }
+            .btn
+            {
+                margin-top: 50px;
+            }
+            input[type="submit"]
+            {
+                color: white;
+                background-color: #333;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                border: none;
+                height: 50px;
+                width: 150px;
+                border-radius: 50px;
+                padding: 10px;
+                margin-bottom: 40px;
+            }
+            input[type="submit"]:hover
+            {
+                background-color: rgb(255, 93, 93);
+                font-weight: bold;
+            }
+            .from-sec h1{
+                color: white;
+                font-size: 30px;
+            }
+            .Gender
+            {
+                border: none;
+                padding: 10px;
+                width: 250px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+            }
+            .Stream
+            {
+                border: none;
+                padding: 10px;
+                width: 250px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+            }
+            .footer h3{
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="images">
+                <img src="static\images\main-banner.jpg" class="image-1">
+            </div>
+        </div>
+        <div class="container">
+            <div class="heading">
+                <h1>student placement classifier model</h1>
+            </div>
+        </div>
+        <div class="from-sec">
+            <center>
+                <form name="prediction" action="/predict" method="POST" class="pred">
+                <input type="text" placeholder="Age" name="Age">
+                <select class="Gender" name="Gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <select class="Stream" name="Stream">
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Electronics And Communication</option>
+                    <option>Mechanical</option>
+                    <option>Electrical</option>
+                    <option>Civil</option>
+                </select>
+                <input type="text" placeholder="Internships" name="Internships"><br>
+                <input type="text" placeholder="CGPA" name="CGPA">
+                <input type="text" placeholder="Hostel" name="Hostel">
+                <input type="text" placeholder="HistoryOfBacklogs" name="HistoryOfBacklogs"><br>
+                <div class="btn">
+                    <input type="submit" class="submit" value="Predict">
+                </div>
+                <div>
+                    <h1> {{ prediction_text }}</h1>
+                </div>
+            </form></center>
+        </div>
+        <div class="footer">
+            <h3>
+                Delivery Contact:
+                harshitpatel8980@gmail.com<br>
+            </h3>
+        </div>
+    </body>
+</html>
